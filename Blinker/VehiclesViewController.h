@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VehiclesViewController : UIViewController
+@interface VehiclesViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) IBOutlet UITableView *tbView;
+@property (nonatomic, strong) NSMutableArray *vehiclesArray;
 
 @end

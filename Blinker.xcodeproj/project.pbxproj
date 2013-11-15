@@ -32,6 +32,17 @@
 		274B50E61833890400723C4D /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = 274B50E11833890400723C4D /* zbar-help.html */; };
 		274B50E71833890400723C4D /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = 274B50E21833890400723C4D /* zbar-helpicons.png */; };
 		274B50E81833890400723C4D /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = 274B50E31833890400723C4D /* zbar-samples.png */; };
+		274B51061835FA9500723C4D /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 274B51041835FA9500723C4D /* 1.jpg */; };
+		274B51071835FA9500723C4D /* 1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 274B51051835FA9500723C4D /* 1@2x.jpg */; };
+		274B51101835FE0D00723C4D /* 350z.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 274B51081835FE0D00723C4D /* 350z.jpg */; };
+		274B51111835FE0D00723C4D /* 350z@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 274B51091835FE0D00723C4D /* 350z@2x.jpg */; };
+		274B51121835FE0D00723C4D /* accord.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 274B510A1835FE0D00723C4D /* accord.jpg */; };
+		274B51131835FE0D00723C4D /* accord@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 274B510B1835FE0D00723C4D /* accord@2x.jpg */; };
+		274B51141835FE0D00723C4D /* mdx.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 274B510C1835FE0D00723C4D /* mdx.jpg */; };
+		274B51151835FE0D00723C4D /* mdx@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 274B510D1835FE0D00723C4D /* mdx@2x.jpg */; };
+		274B51161835FE0D00723C4D /* tacoma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 274B510E1835FE0D00723C4D /* tacoma.jpg */; };
+		274B51171835FE0D00723C4D /* tacoma@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 274B510F1835FE0D00723C4D /* tacoma@2x.jpg */; };
+		274B511B1835FEBB00723C4D /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B511A1835FEBB00723C4D /* GalleryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +107,18 @@
 		274B50E11833890400723C4D /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
 		274B50E21833890400723C4D /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
 		274B50E31833890400723C4D /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		274B51041835FA9500723C4D /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		274B51051835FA9500723C4D /* 1@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1@2x.jpg"; sourceTree = "<group>"; };
+		274B51081835FE0D00723C4D /* 350z.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 350z.jpg; sourceTree = "<group>"; };
+		274B51091835FE0D00723C4D /* 350z@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "350z@2x.jpg"; sourceTree = "<group>"; };
+		274B510A1835FE0D00723C4D /* accord.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = accord.jpg; sourceTree = "<group>"; };
+		274B510B1835FE0D00723C4D /* accord@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "accord@2x.jpg"; sourceTree = "<group>"; };
+		274B510C1835FE0D00723C4D /* mdx.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mdx.jpg; sourceTree = "<group>"; };
+		274B510D1835FE0D00723C4D /* mdx@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mdx@2x.jpg"; sourceTree = "<group>"; };
+		274B510E1835FE0D00723C4D /* tacoma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tacoma.jpg; sourceTree = "<group>"; };
+		274B510F1835FE0D00723C4D /* tacoma@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tacoma@2x.jpg"; sourceTree = "<group>"; };
+		274B51191835FEBB00723C4D /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
+		274B511A1835FEBB00723C4D /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +197,8 @@
 				274B5077183381AC00723C4D /* VinScanViewController.m */,
 				274B5079183381AC00723C4D /* VehiclesViewController.h */,
 				274B507A183381AC00723C4D /* VehiclesViewController.m */,
+				274B51191835FEBB00723C4D /* GalleryViewController.h */,
+				274B511A1835FEBB00723C4D /* GalleryViewController.m */,
 				274B507C183381AC00723C4D /* Images.xcassets */,
 				274B5068183381AC00723C4D /* Supporting Files */,
 			);
@@ -183,6 +208,7 @@
 		274B5068183381AC00723C4D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				274B51181835FE1300723C4D /* Images */,
 				274B5069183381AC00723C4D /* Blinker-Info.plist */,
 				274B506A183381AC00723C4D /* InfoPlist.strings */,
 				274B506D183381AC00723C4D /* main.m */,
@@ -273,6 +299,23 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		274B51181835FE1300723C4D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				274B51081835FE0D00723C4D /* 350z.jpg */,
+				274B51091835FE0D00723C4D /* 350z@2x.jpg */,
+				274B510A1835FE0D00723C4D /* accord.jpg */,
+				274B510B1835FE0D00723C4D /* accord@2x.jpg */,
+				274B510C1835FE0D00723C4D /* mdx.jpg */,
+				274B510D1835FE0D00723C4D /* mdx@2x.jpg */,
+				274B510E1835FE0D00723C4D /* tacoma.jpg */,
+				274B510F1835FE0D00723C4D /* tacoma@2x.jpg */,
+				274B51041835FA9500723C4D /* 1.jpg */,
+				274B51051835FA9500723C4D /* 1@2x.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -351,11 +394,21 @@
 			files = (
 				274B507D183381AC00723C4D /* Images.xcassets in Resources */,
 				274B50E61833890400723C4D /* zbar-help.html in Resources */,
+				274B51071835FA9500723C4D /* 1@2x.jpg in Resources */,
 				274B50E81833890400723C4D /* zbar-samples.png in Resources */,
 				274B50E71833890400723C4D /* zbar-helpicons.png in Resources */,
+				274B51121835FE0D00723C4D /* accord.jpg in Resources */,
 				274B50E51833890400723C4D /* zbar-back.png in Resources */,
+				274B51061835FA9500723C4D /* 1.jpg in Resources */,
+				274B51101835FE0D00723C4D /* 350z.jpg in Resources */,
+				274B51141835FE0D00723C4D /* mdx.jpg in Resources */,
 				274B506C183381AC00723C4D /* InfoPlist.strings in Resources */,
+				274B51151835FE0D00723C4D /* mdx@2x.jpg in Resources */,
 				274B5075183381AC00723C4D /* Main.storyboard in Resources */,
+				274B51131835FE0D00723C4D /* accord@2x.jpg in Resources */,
+				274B51161835FE0D00723C4D /* tacoma.jpg in Resources */,
+				274B51171835FE0D00723C4D /* tacoma@2x.jpg in Resources */,
+				274B51111835FE0D00723C4D /* 350z@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +431,7 @@
 				274B5072183381AC00723C4D /* AppDelegate.m in Sources */,
 				274B5078183381AC00723C4D /* VinScanViewController.m in Sources */,
 				274B506E183381AC00723C4D /* main.m in Sources */,
+				274B511B1835FEBB00723C4D /* GalleryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

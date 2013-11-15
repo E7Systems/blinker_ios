@@ -46,8 +46,7 @@
                        to: 0];
     
     // present and release the controller
-    [self presentModalViewController: reader
-                            animated: YES];
+    [self presentModalViewController: reader animated: YES];
 }
 
 - (void) imagePickerController: (UIImagePickerController*) reader didFinishPickingMediaWithInfo: (NSDictionary*) info
