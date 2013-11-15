@@ -20,6 +20,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    resultText.enabled = NO;
 }
 
 - (IBAction) scanButtonTapped
@@ -33,7 +35,10 @@
     
     UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"red_line.png"]];
     
-    imgView.frame = CGRectMake(20, (screenBounds.size.height/2)-10, screenBounds.size.width-40, 10);
+    imgView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+
+    
+    imgView.frame = CGRectMake(20, (screenBounds.size.height/2)-80, screenBounds.size.width-40, 10);
     
     reader.cameraOverlayView = imgView;
     

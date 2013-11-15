@@ -11,11 +11,11 @@
 
 @interface VinScanViewController : UIViewController <ZBarReaderDelegate> {
     UIImageView *resultImage;
-    UITextView *resultText;
+    UITextField *resultText;
 }
 
 @property (nonatomic, retain) IBOutlet UIImageView *resultImage;
-@property (nonatomic, retain) IBOutlet UITextView *resultText;
+@property (nonatomic, retain) IBOutlet UITextField *resultText;
 
 - (IBAction) scanButtonTapped;
 

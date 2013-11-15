@@ -13,22 +13,11 @@
                         <viewControllerLayoutGuide type="bottom" id="aSy-kn-KP5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2VE-Yg-loa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="psb-dH-SJc">
-                                <rect key="frame" x="15" y="74" width="291" height="173"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w0F-wK-99m">
-                                <rect key="frame" x="15" y="255" width="291" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7X-0B-ssF">
-                                <rect key="frame" x="133" y="430" width="55" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7X-0B-ssF">
+                                <rect key="frame" x="20" y="98" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Scan">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,13 +26,27 @@
                                     <action selector="scanButtonTapped" destination="CZ4-MO-1fc" eventType="touchUpInside" id="mxX-n7-Dpk"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="...VIN..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FpH-Jm-kp0">
+                                <rect key="frame" x="20" y="42" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FpH-Jm-kp0" secondAttribute="trailing" constant="20" id="7N5-0r-kez"/>
+                            <constraint firstItem="k7X-0B-ssF" firstAttribute="top" secondItem="FpH-Jm-kp0" secondAttribute="bottom" constant="26" id="7e2-P1-hxO"/>
+                            <constraint firstItem="FpH-Jm-kp0" firstAttribute="top" secondItem="cce-z7-d5y" secondAttribute="bottom" constant="42" id="Iyl-CU-XWi"/>
+                            <constraint firstAttribute="trailing" secondItem="k7X-0B-ssF" secondAttribute="trailing" constant="20" id="f8m-5T-2Oz"/>
+                            <constraint firstItem="k7X-0B-ssF" firstAttribute="leading" secondItem="2VE-Yg-loa" secondAttribute="leading" constant="20" id="pVK-Qd-teY"/>
+                            <constraint firstItem="FpH-Jm-kp0" firstAttribute="leading" secondItem="2VE-Yg-loa" secondAttribute="leading" constant="20" id="uMK-pa-Eq5"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sAl-7z-aMe"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="VIN Scan" id="sAl-7z-aMe"/>
                     <connections>
-                        <outlet property="resultImage" destination="psb-dH-SJc" id="PIv-b5-Wzl"/>
-                        <outlet property="resultText" destination="w0F-wK-99m" id="V1l-em-4CP"/>
+                        <outlet property="resultText" destination="FpH-Jm-kp0" id="cWm-nL-Wam"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
@@ -62,7 +65,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wUu-Az-gqx">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wUu-Az-gqx">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -73,9 +76,15 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="09e-eL-FcV" firstAttribute="top" secondItem="wUu-Az-gqx" secondAttribute="bottom" id="CrY-DC-81x"/>
+                            <constraint firstItem="wUu-Az-gqx" firstAttribute="leading" secondItem="gMD-aP-Fq6" secondAttribute="leading" id="XQL-R2-MLV"/>
+                            <constraint firstAttribute="trailing" secondItem="wUu-Az-gqx" secondAttribute="trailing" id="c9I-bp-eXJ"/>
+                            <constraint firstItem="wUu-Az-gqx" firstAttribute="top" secondItem="v6d-BZ-JSc" secondAttribute="bottom" id="ymd-fz-6d3"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" id="MfK-ss-dhk"/>
+                    <navigationItem key="navigationItem" title="Vehicles" id="MfK-ss-dhk"/>
                     <connections>
                         <outlet property="tbView" destination="wUu-Az-gqx" id="kFN-rF-B20"/>
                         <segue destination="wdB-Tf-0fu" kind="push" id="HlO-Mp-lZ9"/>
