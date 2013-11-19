@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GalleryViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface GalleryViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-@property (nonatomic, strong) UICollectionView *colView;
+@property (nonatomic, strong) IBOutlet UICollectionView *colView;
+
+-(IBAction)showCameraAction:(id)sender;
 
 @end

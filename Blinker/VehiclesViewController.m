@@ -7,6 +7,7 @@
 //
 
 #import "VehiclesViewController.h"
+#import "GalleryViewController.h"
 
 @interface VehiclesViewController ()
 
@@ -137,12 +138,12 @@
 {
     // Navigation logic may go here. Create and push another view controller.
     
-//    CorporateViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"CorporateViewController"];
-//    
+    GalleryViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"GalleryViewController"];
+    
 //    vc.navTitle = [[_content objectAtIndex:indexPath.row] objectForKey:@"headerTitle"];
 //    vc.content = [[_content objectAtIndex:indexPath.row] objectForKey:@"rowValues"];
-//    
-//    [self.navigationController pushViewController:vc animated:YES];
+    
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 

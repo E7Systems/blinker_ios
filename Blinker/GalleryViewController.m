@@ -7,8 +7,13 @@
 //
 
 #import "GalleryViewController.h"
+#import "GalleryViewCell.h"
+#import "GallerySliderViewController.h"
 
-@interface GalleryViewController ()
+@interface GalleryViewController () {
+
+    NSMutableArray *testImages;
+}
 
 @end
 
@@ -29,40 +34,89 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    // Initialize recipe image array
+    NSArray *strImages = [NSArray arrayWithObjects:@"350z.jpg", @"accord.jpg", @"mdx.jpg", @"1.jpg", nil];
+    
+    testImages = [[NSMutableArray alloc] initWithArray:strImages];
+}
+
+
+-(IBAction)showCameraAction:(id)sender
+{
+    UIImagePickerController *imagePickController=[[UIImagePickerController alloc]init];
+    imagePickController.sourceType=UIImagePickerControllerSourceTypeCamera;
+    imagePickController.delegate = self;
+    imagePickController.allowsEditing=TRUE;
+    [self.navigationController presentViewController:imagePickController animated:YES completion:nil];
+}
+
+
+#pragma mark - UIImagePickerControllerDelegate
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
+    
+    [testImages addObject:image];
+    
+    [self.colView reloadData];
+    
+    //Upload image async to server
+    
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 
 #pragma mark - UICollectionView Datasource
 
-- (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
     return 1;
 }
 
-- (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
-    //NSString *searchTerm = self.searches[section];
-    return 1;
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    
+    NSLog(@"count: %d", [testImages count]);
+    
+    return [testImages count];
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor whiteColor];
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    static NSString *identifier = @"Cell";
+    
+    GalleryViewCell *cell = (GalleryViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    
+    if ([[testImages objectAtIndex:indexPath.row] isKindOfClass:[NSString class]]) {
+        
+        UIImageView *imageView = (UIImageView *)[cell viewWithTag:100];
+        imageView.image = [UIImage imageNamed:[testImages objectAtIndex:indexPath.row]];
+        
+    } else if ([[testImages objectAtIndex:indexPath.row] isKindOfClass:[UIImage class]]) {
+        
+        UIImageView *imageView = (UIImageView *)[cell viewWithTag:100];
+        imageView.image = [testImages objectAtIndex:indexPath.row];
+        
+    }
     
     return cell;
 }
 
-/*- (UICollectionReusableView *)collectionView:
- (UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
- {
- return [[UICollectionReusableView alloc] init];
- }*/
-
-#pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    // TODO: Select Item
+
+    GallerySliderViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"GallerySliderViewController"];
+    
+    vc.imageArray = testImages;
+    vc.initialPage = indexPath.row;
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
-- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
-    // TODO: Deselect item
+
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
+{
 }
 
 - (void)didReceiveMemoryWarning

@@ -43,6 +43,8 @@
 		274B51161835FE0D00723C4D /* tacoma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 274B510E1835FE0D00723C4D /* tacoma.jpg */; };
 		274B51171835FE0D00723C4D /* tacoma@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 274B510F1835FE0D00723C4D /* tacoma@2x.jpg */; };
 		274B511B1835FEBB00723C4D /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B511A1835FEBB00723C4D /* GalleryViewController.m */; };
+		274B5143183A998B00723C4D /* GalleryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B5142183A998B00723C4D /* GalleryViewCell.m */; };
+		274B5146183AAEBF00723C4D /* GallerySliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B5145183AAEBF00723C4D /* GallerySliderViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,10 @@
 		274B510F1835FE0D00723C4D /* tacoma@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tacoma@2x.jpg"; sourceTree = "<group>"; };
 		274B51191835FEBB00723C4D /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
 		274B511A1835FEBB00723C4D /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
+		274B5141183A998B00723C4D /* GalleryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewCell.h; sourceTree = "<group>"; };
+		274B5142183A998B00723C4D /* GalleryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewCell.m; sourceTree = "<group>"; };
+		274B5144183AAEBF00723C4D /* GallerySliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GallerySliderViewController.h; sourceTree = "<group>"; };
+		274B5145183AAEBF00723C4D /* GallerySliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GallerySliderViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +205,10 @@
 				274B507A183381AC00723C4D /* VehiclesViewController.m */,
 				274B51191835FEBB00723C4D /* GalleryViewController.h */,
 				274B511A1835FEBB00723C4D /* GalleryViewController.m */,
+				274B5141183A998B00723C4D /* GalleryViewCell.h */,
+				274B5142183A998B00723C4D /* GalleryViewCell.m */,
+				274B5144183AAEBF00723C4D /* GallerySliderViewController.h */,
+				274B5145183AAEBF00723C4D /* GallerySliderViewController.m */,
 				274B507C183381AC00723C4D /* Images.xcassets */,
 				274B5068183381AC00723C4D /* Supporting Files */,
 			);
@@ -428,7 +438,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				274B507B183381AC00723C4D /* VehiclesViewController.m in Sources */,
+				274B5143183A998B00723C4D /* GalleryViewCell.m in Sources */,
 				274B5072183381AC00723C4D /* AppDelegate.m in Sources */,
+				274B5146183AAEBF00723C4D /* GallerySliderViewController.m in Sources */,
 				274B5078183381AC00723C4D /* VinScanViewController.m in Sources */,
 				274B506E183381AC00723C4D /* main.m in Sources */,
 				274B511B1835FEBB00723C4D /* GalleryViewController.m in Sources */,
