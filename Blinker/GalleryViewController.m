@@ -114,7 +114,10 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     //NSDictionary *parameters = @{@"foo": @"bar"};
     //NSURL *filePath = [NSURL fileURLWithPath:@"file://path/to/image.png"];
-    [manager POST:@"http://blnkr-carrier.herokuapp.com/api/v1/images/99999" parameters:header constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+    
+    NSString *postURL = [NSString stringWithFormat:@"http://blnkr-carrier.herokuapp.com/api/v1/images/%@", [vehicleDict objectForKey:@"VIN"]];
+    
+    [manager POST:postURL parameters:header constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         //[formData appendPartWithFileData:imageToUpload name:@"image" error:nil];
         [formData appendPartWithFileData:imageToUpload name:@"image" fileName:@"temp.jpeg" mimeType:@"image/jpeg"];
     } success:^(AFHTTPRequestOperation *operation, id responseObject) {
