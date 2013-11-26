@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFNetworking.h"
+#import "UIImage+Resize.h"
 
 @interface GalleryViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) IBOutlet UICollectionView *colView;
+@property (nonatomic, strong) NSDictionary *vehicleDict;
 
 -(IBAction)showCameraAction:(id)sender;
 

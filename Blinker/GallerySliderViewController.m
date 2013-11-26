@@ -43,9 +43,29 @@
         
         subview.tag = 100 + i;
         
-        if ([[imageArray objectAtIndex:i] isKindOfClass:[NSString class]]) {
+        if ([[imageArray objectAtIndex:i] isKindOfClass:[NSDictionary class]]) {
             
-            subview.image = [UIImage imageNamed:[imageArray objectAtIndex:i]];
+            //subview.image = [UIImage imageNamed:[imageArray objectAtIndex:i]];
+            
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(void) {
+                
+                //NSString *key = [[venueDict objectForKey:@"logoUrl"] MD5Hash];
+                //NSData *data = [FTWCache objectForKey:key];
+                
+                UIImage *image = nil;
+                
+                NSString *url = [[imageArray objectAtIndex:i] objectForKey:@"path_orig"];
+                
+                NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+                //[FTWCache setObject:data forKey:key];
+                image = [UIImage imageWithData:data];
+                
+                dispatch_sync(dispatch_get_main_queue(), ^(void) {
+                    //UIImageView *imageView = (UIImageView *)[cell viewWithTag:100];
+                    subview.image = image;
+                    //[cell setNeedsLayout];
+                });
+            });
             
         } else if ([[imageArray objectAtIndex:i] isKindOfClass:[UIImage class]]) {
             

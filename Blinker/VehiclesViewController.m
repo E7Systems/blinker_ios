@@ -8,6 +8,7 @@
 
 #import "VehiclesViewController.h"
 #import "GalleryViewController.h"
+#import "AFNetworking.h"
 
 @interface VehiclesViewController ()
 
@@ -25,26 +26,26 @@
     
     self.vehiclesArray = [[NSMutableArray alloc] init];
     
-    NSArray *objects = [NSArray arrayWithObjects:@"2004" ,@"Nissan" ,@"350Z" ,@"$12,000" ,@"350z.jpg" , nil];
-    NSArray *keys = [NSArray arrayWithObjects:@"year" ,@"make" ,@"model" ,@"price" ,@"thumbnail" , nil];
+    NSArray *objects = [NSArray arrayWithObjects:@"2004" ,@"Nissan" ,@"350Z" ,@"$12,000" ,@"350z.jpg",@"99999" , nil];
+    NSArray *keys = [NSArray arrayWithObjects:@"year" ,@"make" ,@"model" ,@"price" ,@"thumbnail", @"VIN" , nil];
     
     NSDictionary *carDict = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
     [self.vehiclesArray addObject:carDict];
     
-    NSArray *objects1 = [NSArray arrayWithObjects:@"2012" ,@"Toyota" ,@"Tacoma" ,@"$24,000" ,@"tacoma.jpg" , nil];
-    NSArray *keys1 = [NSArray arrayWithObjects:@"year" ,@"make" ,@"model" ,@"price" ,@"thumbnail" , nil];
+    NSArray *objects1 = [NSArray arrayWithObjects:@"2012" ,@"Toyota" ,@"Tacoma" ,@"$24,000" ,@"tacoma.jpg",@"99998" , nil];
+    NSArray *keys1 = [NSArray arrayWithObjects:@"year" ,@"make" ,@"model" ,@"price" ,@"thumbnail",@"VIN" , nil];
     
     NSDictionary *carDict1 = [NSDictionary dictionaryWithObjects:objects1 forKeys:keys1];
     [self.vehiclesArray addObject:carDict1];
     
-    NSArray *objects2 = [NSArray arrayWithObjects:@"2001" ,@"Acura" ,@"MDX" ,@"$9,000" ,@"mdx.jpg" , nil];
-    NSArray *keys2 = [NSArray arrayWithObjects:@"year" ,@"make" ,@"model" ,@"price" ,@"thumbnail" , nil];
+    NSArray *objects2 = [NSArray arrayWithObjects:@"2001" ,@"Acura" ,@"MDX" ,@"$9,000" ,@"mdx.jpg",@"99997" , nil];
+    NSArray *keys2 = [NSArray arrayWithObjects:@"year" ,@"make" ,@"model" ,@"price" ,@"thumbnail",@"VIN" , nil];
     
     NSDictionary *carDict2 = [NSDictionary dictionaryWithObjects:objects2 forKeys:keys2];
     [self.vehiclesArray addObject:carDict2];
     
-    NSArray *objects3 = [NSArray arrayWithObjects:@"2006" ,@"Honda" ,@"Accord" ,@"$12,000" ,@"accord.jpg" , nil];
-    NSArray *keys3 = [NSArray arrayWithObjects:@"year" ,@"make" ,@"model" ,@"price" ,@"thumbnail" , nil];
+    NSArray *objects3 = [NSArray arrayWithObjects:@"2006" ,@"Honda" ,@"Accord" ,@"$12,000" ,@"accord.jpg",@"99996" , nil];
+    NSArray *keys3 = [NSArray arrayWithObjects:@"year" ,@"make" ,@"model" ,@"price" ,@"thumbnail",@"VIN" , nil];
     
     NSDictionary *carDict3 = [NSDictionary dictionaryWithObjects:objects3 forKeys:keys3];
     [self.vehiclesArray addObject:carDict3];
@@ -142,6 +143,7 @@
     
 //    vc.navTitle = [[_content objectAtIndex:indexPath.row] objectForKey:@"headerTitle"];
 //    vc.content = [[_content objectAtIndex:indexPath.row] objectForKey:@"rowValues"];
+    vc.vehicleDict = [self.vehiclesArray objectAtIndex:indexPath.row];
     
     [self.navigationController pushViewController:vc animated:YES];
     
