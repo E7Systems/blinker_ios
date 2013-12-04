@@ -29,6 +29,7 @@
     // ADD: present a barcode reader that scans from the camera feed
     ZBarReaderViewController *reader = [ZBarReaderViewController new];
     reader.readerDelegate = self;
+    reader.scanCrop = CGRectMake(0, 0.3, 1, 0.4);
     reader.supportedOrientationsMask = ZBarOrientationMaskAll;
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
